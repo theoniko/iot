@@ -1,0 +1,1 @@
+/usr/bin/c++   -g -fsanitize=address CMakeFiles/serverApp.dir/src/server/main.cpp.o -o ../bin/serverApp  pb/libmyproto.a -lzmq libserver.a pb/libmyproto.a /usr/lib/x86_64-linux-gnu/libprotobuf.so -lzmq 

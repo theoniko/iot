@@ -1,0 +1,1 @@
+/usr/bin/c++   -g -fsanitize=address CMakeFiles/test.dir/Data3dGenerator_test.cpp.o CMakeFiles/test.dir/SensorData_test.cpp.o CMakeFiles/test.dir/main.cpp.o -o ../../bin/test  ../lib/libgtest.a ../lib/libgmock.a ../libserver.a ../lib/libgtest.a ../pb/libmyproto.a /usr/lib/x86_64-linux-gnu/libprotobuf.so -lzmq 
