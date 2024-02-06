@@ -1,2 +1,0 @@
-/usr/bin/ar qc libserver.a CMakeFiles/server.dir/src/server/Data3dGenerator.cpp.o CMakeFiles/server.dir/src/server/PositionService.cpp.o CMakeFiles/server.dir/src/server/Publisher.cpp.o CMakeFiles/server.dir/src/server/Sensor.cpp.o CMakeFiles/server.dir/src/server/main.cpp.o
-/usr/bin/ranlib libserver.a

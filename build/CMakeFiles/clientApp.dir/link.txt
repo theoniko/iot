@@ -1,1 +1,0 @@
-/usr/bin/c++   -g -fsanitize=address CMakeFiles/clientApp.dir/src/client/Client.cpp.o -o ../bin/clientApp  pb/libmyproto.a -lzmq /usr/lib/x86_64-linux-gnu/libprotobuf.so 

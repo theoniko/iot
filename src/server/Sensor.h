@@ -5,6 +5,7 @@
 #include <string>
 #include <chrono>
 #include "Data3dGenerator.h"
+#include "Macro.h"
 
 static uint64_t getCurrentTime() {
     return std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
@@ -30,13 +31,13 @@ public:
     PositionSensor(uint64_t id, Data3dGenerator& dataGenerator);
     std::string sendMessage() override;
     void update() override;
-
+    void logToConsole();
 private:
     PositionData positionData;
     Data3dGenerator& dataGenerator_;
 
     std::string serializeToString();
-    
+
 };
 
 #endif // SENSOR_H

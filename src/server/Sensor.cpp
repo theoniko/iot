@@ -19,10 +19,16 @@ void PositionSensor::update()
 {
     positionData.timestamp_ = getCurrentTime();
     positionData.position_ = dataGenerator_.generateData3d(positionData.position_);
-    //std::cout << "Position (x, y, z): (" << x << ", " << y << ", " << z << ")" << std::endl;
 };
 
-
+void PositionSensor::logToConsole()
+{
+        std::chrono::microseconds duration(positionData.timestamp_ );
+        std::chrono::system_clock::time_point time_point(duration);
+        std::time_t time_t_value = std::chrono::system_clock::to_time_t(time_point);
+        std::cout << "Sent data from sensor " << positionData.id_ << " at timestamp " << std::ctime(&time_t_value);
+        std::cout << " Position (x, y, z): (" << positionData.position_.x_ << ", " << positionData.position_.y_ << ", " << positionData.position_.z_ << ")" << std::endl;
+};
 
 std::string PositionSensor::serializeToString()
 {

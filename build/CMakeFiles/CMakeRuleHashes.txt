@@ -1,2 +1,0 @@
-# Hashes of file build rules.
-541db93eda065504bfd49f40fea6c8cc pb/position.pb.h

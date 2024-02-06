@@ -1,2 +1,0 @@
-/usr/bin/ar qc libmyproto.a CMakeFiles/myproto.dir/position.pb.cc.o
-/usr/bin/ranlib libmyproto.a

@@ -22,8 +22,11 @@ target_link_libraries(clientApp PRIVATE myproto zmq)
 
 file(GLOB_RECURSE SERVER_SRC "src/server/*.h" "src/server/*.cpp")
 
+
 add_library(server  ${SERVER_SRC})
 target_link_libraries(server PRIVATE myproto zmq)
+option(TESTING OFF)
+#target_compile_definitions(server PRIVATE TESTING=0)
 
 # Create an executable named "my_app" using the specified source files.
 add_executable(serverApp "src/server/main.cpp")
@@ -33,6 +36,5 @@ target_compile_definitions(serverApp PRIVATE cxx_std_20)
 # Link the "my_app" target with my protobuf lib.
 # this imports the dependencies
 target_link_libraries(serverApp PRIVATE myproto zmq server)
-
 
 

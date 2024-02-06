@@ -12,7 +12,7 @@ FetchContent_MakeAvailable(googletest)
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}")
 
 enable_testing()
-file(GLOB_RECURSE SOURCES   "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
+file(GLOB_RECURSE SOURCES   "${CMAKE_CURRENT_SOURCE_DIR}/*.h" "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
 
 add_executable(
   test
@@ -26,3 +26,5 @@ target_link_libraries(
   GTest::gmock
   server
 )
+option(TESTING ON)
+#target_compile_definitions(test PRIVATE TESTING01)

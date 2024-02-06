@@ -5,11 +5,10 @@
 #include "Sensor.h"
 #include "Publisher.h"
 
-
 class PositionService {
 public:
     PositionService(ZmqPublisher& publisher);
-    void registerSensor(PositionSensor sensor);
+    void registerSensor(PositionSensor& sensor);
     void update();
     void publish();
 private:

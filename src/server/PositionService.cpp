@@ -3,7 +3,7 @@
 
 PositionService::PositionService(ZmqPublisher& publisher) : publisher(publisher){};
 
-void PositionService::registerSensor(PositionSensor sensor)
+void PositionService::registerSensor(PositionSensor& sensor)
 {
     sensors.emplace_back(sensor);
 };
@@ -22,6 +22,8 @@ void PositionService::publish()
     {
        const std::string serialized_message = sensor.sendMessage();
        publisher.publish(serialized_message);
+       // TODo: Check publish result and then log
+       sensor.logToConsole();
     }
 };
 
