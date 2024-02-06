@@ -1,6 +1,4 @@
 
-
-# sudo apt-get -y install google-mock sudo apt-get install libgtest-dev
 include(FetchContent)
 
 FetchContent_Declare(
@@ -27,4 +25,3 @@ target_link_libraries(
   server
 )
 option(TESTING ON)
-#target_compile_definitions(test PRIVATE TESTING01)
