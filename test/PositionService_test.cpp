@@ -16,9 +16,7 @@ TEST(PositionServiceTest, publish) {
     PositionService positionService(mockZmqPublisher);
     positionService.registerSensor(mockSensor);
 
-    // EXPECT_CALL(mockSensor, sendMessage()).WillOnce(::testing::Return("Serialized message"));
     EXPECT_CALL(mockZmqPublisher, publish(_)).Times(1);
-
     positionService.publish();
 }
 

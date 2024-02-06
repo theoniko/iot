@@ -32,6 +32,7 @@ public:
     std::string sendMessage() override;
     void update() override;
     void logToConsole();
+    Coordinates getCoordinates() const { return positionData.position_;}
 private:
     PositionData positionData;
     Data3dGenerator& dataGenerator_;

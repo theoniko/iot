@@ -14,9 +14,6 @@ public:
     MockPositionSensor(uint64_t id, Data3dGenerator& dataGenerator) : PositionSensor(id, dataGenerator) {}
 
     MOCK_METHOD(std::string, sendMessage, (), (override));
-    // MOCK_METHOD(void, update, (), (override));
-     // MOCK_METHOD(void, logToConsole, (), (override));
-    // MOCK_METHOD(std::string, serializeToString, (), (override));
 };
 
 
