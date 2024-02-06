@@ -24,8 +24,10 @@ int main()
     constexpr auto SENSOR_SAMPLING_IN_MS = 1000;
     while (true)
     {
+        std::cout << "Sending ..." << std::endl;
         positionService.update();
         positionService.publish();
         std::this_thread::sleep_for(std::chrono::milliseconds(SENSOR_SAMPLING_IN_MS));
+        std::cout << "..." << std::endl;
     }
 }
