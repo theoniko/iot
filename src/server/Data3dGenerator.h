@@ -36,7 +36,6 @@ class Data3dGenerator {
 public:
     Data3dGenerator();
     Data3dGenerator(PositionUpdater positionUpdater, NoiseGenerator noiseGenerator);
-    // void initializePositions();
     Coordinates generateData3d(const Coordinates& current);
 private:
     PositionUpdater positionUpdater_;

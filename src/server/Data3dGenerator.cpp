@@ -41,16 +41,7 @@ Data3dGenerator::Data3dGenerator(){}
 
 Data3dGenerator::Data3dGenerator(PositionUpdater positionUpdater, NoiseGenerator noiseGenerator)
     : positionUpdater_(positionUpdater), noiseGenerator_(noiseGenerator) {
-    //initializePositions();
 }
-
-/*
-void Data3dGenerator::initializePositions() {
-    // Initialize positions randomly within the specified range (0 to 100 meters)
-    coordinates_.x_ = getRandomValue(POSITION_LOWER_BOUND, POSITION_UPPER_BOUND);
-    coordinates_.y_ = getRandomValue(POSITION_LOWER_BOUND, POSITION_UPPER_BOUND);
-    coordinates_.z_ = getRandomValue();
-}*/
 
 double clamp(double val, double low = POSITION_LOWER_BOUND, double high = POSITION_UPPER_BOUND) {
     return std::min(std::max(val, low), high);
